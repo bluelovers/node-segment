@@ -2,16 +2,17 @@
  * Created by user on 2018/4/15/015.
  */
 
-import Segment, { POSTAG } from '../index';
-import { IWordDebug } from '../lib/util/debug';
-import { createSegment } from './lib';
-import { debug_token } from '../lib/util'
-import { getDictMain } from './lib/index';
+import Segment, { POSTAG } from '../../index';
+import { IWordDebug } from '../../lib/util/debug';
+import { debug_token } from '../../lib/util'
+import { createSegment, getDictMain } from './index';
 import { chalkByConsole, console } from 'debug-color2';
 import { EnumDictDatabase } from '@novel-segment/types';
 import prettyuse = require('prettyuse');
 import { printPrettyDiff } from '@novel-segment/pretty-diff';
 import { outputFileSync, readFileSync } from 'fs-extra';
+import { __root } from '../__root';
+import { join } from 'upath2';
 
 let file: string;
 let DEBUG_EACH: boolean;
@@ -149,14 +150,14 @@ if (changed)
 	console.red(`changed: ${changed}`);
 }
 
-outputFileSync('./temp/c1.json', JSON.stringify({
+outputFileSync(join(__root, './test/temp/c1.json'), JSON.stringify({
 
 	changed,
 
 	ret,
 }, null, "\t"));
 
-outputFileSync('./temp/c1.txt', output_text);
+outputFileSync(join(__root, './test/temp/c1.txt'), output_text);
 
 console.timeEnd(`doSegment`);
 
