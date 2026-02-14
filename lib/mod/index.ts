@@ -1,5 +1,9 @@
 /**
  * Created by user on 2018/4/16/016.
+ *
+ * 模块索引和枚举
+ *
+ * 导出所有子模块类并定义可用模块的枚举。
  */
 
 import { $enum } from "ts-enum-util";
@@ -48,12 +52,12 @@ export enum ENUM_SUBMODS
 	JpSimpleTokenizer = 'JpSimpleTokenizer',
 
 	/**
-	 * 注音
+	 * 注音（注音符号）识别
 	 */
 	ZhuyinTokenizer = 'ZhuyinTokenizer',
 
 	/**
-	 * 部首
+	 * 部首识别（已禁用）
 	 */
 	//ZhRadicalTokenizer = 'ZhRadicalTokenizer',
 
@@ -101,13 +105,34 @@ export enum ENUM_SUBMODS_OTHER
 	SingleTokenizer = 'SingleTokenizer',
 }
 
+/**
+ * 子模块名称类型
+ *
+ * 所有可用子模块名称的联合类型。
+ */
 export type ENUM_SUBMODS_NAME = ENUM_SUBMODS | ENUM_SUBMODS_OTHER;
 
+/**
+ * 非默认模块列表
+ *
+ * 未包含在默认模块列表中的模块。
+ */
 export const LIST_SUBMODS_NOT_DEF = [
 	ENUM_SUBMODS.ZhtSynonymOptimizer,
 ];
 
+/**
+ * 子模块枚举包装器
+ *
+ * 用于更方便迭代和查找的包装枚举。
+ */
 export const SUBMODS_LIST = $enum(ENUM_SUBMODS);
+
+/**
+ * 额外子模块枚举包装器
+ *
+ * 用于额外模块的包装枚举。
+ */
 export const SUBMODS_OTHER_LIST = $enum(ENUM_SUBMODS_OTHER);
 
 /**
