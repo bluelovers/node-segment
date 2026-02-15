@@ -611,6 +611,13 @@ export const tests_lazy_base: [string, Parameters<typeof lazyMatch>['1'], Parame
 		],
 	],
 
+	[
+		'就发配給精金法師們使用',
+		[
+			['發配'],
+		],
+	],
+
 ];
 
 export default tests_lazy_base
