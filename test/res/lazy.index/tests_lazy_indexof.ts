@@ -5898,6 +5898,13 @@ export const tests_lazy_indexof: [string, IP['1'], IP['2']?][] = [
 		],
 	],
 
+	[
+		'占有的完全是眷屬的視野',
+		[
+			'佔有',
+		],
+	],
+
 ];
 
 export default tests_lazy_indexof
