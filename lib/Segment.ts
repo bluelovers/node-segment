@@ -140,6 +140,11 @@ export class Segment extends SegmentCore
 			],
 
 			onlyFile: true,
+
+			ignore: [
+				// 防止讀取 README.md
+				'**.md',
+			],
 		};
 
 		if (name.indexOf('*') !== -1)

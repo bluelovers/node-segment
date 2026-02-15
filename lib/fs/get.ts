@@ -12,6 +12,8 @@ export type IOptions = {
 
 	onlyDir?: boolean,
 	onlyFile?: boolean,
+
+	ignore?: string[],
 };
 
 export function searchGlobSync(file: string, options: IOptions): string[]
@@ -64,6 +66,7 @@ export function _searchGlobSync(file, options: IOptions, cwd?: string): string[]
 			'.*',
 			'*.bak',
 			'*.old',
+			...options.ignore,
 		],
 
 		deep: 0,
