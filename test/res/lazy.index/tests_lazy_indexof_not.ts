@@ -165,6 +165,13 @@ export const tests_lazy_indexof_not: [string, Parameters<typeof lazyMatchSynonym
 		],
 	],
 
+	[
+		'要不了多久搶回采礦場的委託單說不定就會被張貼出來',
+		[
+			'采',
+		],
+	],
+
 ];
 
 export default tests_lazy_indexof_not
