@@ -6,7 +6,7 @@
  * Exports the SegmentBase class as the base implementation for segmenters.
  */
 
-import SegmentCore from './core';
+import { SegmentCore } from './core';
 
 /**
  * 分詞器基礎類別

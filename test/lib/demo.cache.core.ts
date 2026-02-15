@@ -175,21 +175,21 @@ if (hook)
 	{
 		// 批次新增字典項目
 		// Batch add dictionary entries
-		if (hook.hookData.list_dict)
+		if (hook.hookData.list_dict?.length)
 		{
 			hook.hookData.list_dict.forEach(args => db_dict.add(...args));
 		}
 
 		// 批次新增同義詞項目
 		// Batch add synonym entries
-		if (hook.hookData.list_synonym)
+		if (hook.hookData.list_synonym?.length)
 		{
 			hook.hookData.list_synonym.forEach(args => db_synonym.add(...args));
 		}
 
 		// 批次新增黑名單詞彙
 		// Batch add blacklist words
-		if (hook.hookData.list_blacklist)
+		if (hook.hookData.list_blacklist?.length)
 		{
 			hook.hookData.list_blacklist.forEach(word => segment.addBlacklist(word));
 		}
