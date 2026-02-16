@@ -1301,6 +1301,27 @@ export const tests_fixme_indexof_not: [string, Parameters<typeof lazyMatchSynony
 		],
 	],
 
+	[
+		'假使于蕾亞所在的洞窟這種昏暗場所發動',
+		[
+			'于',
+		],
+	],
+
+	[
+		'由于韋恩散佈了',
+		[
+			'于',
+		],
+	],
+
+	[
+		'如果螞蟻和災厄都是誕生于里伯大森林',
+		[
+			'于',
+		],
+	],
+
 ];
 
 sortTests(tests_fixme_base);
