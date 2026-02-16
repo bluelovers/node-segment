@@ -6,6 +6,26 @@ This directory contains test files and demo scripts for the Chinese word segment
 
 本目錄包含中文分詞模組的測試檔案與演示腳本。
 
+## Test Files / 測試檔案
+
+本目錄包含兩種類型的測試檔案，需要使用不同的測試框架執行：
+
+### *.test.ts 檔案
+
+這類測試檔案需要使用 **ts-mocha** 執行：
+
+```bash
+ts-mocha "!(node_modules)/**/*.test.{ts,tsx}"
+```
+
+### *.spec.ts 檔案
+
+這類測試檔案需要使用 **jest** 執行：
+
+```bash
+jest
+```
+
 ## Demo Files / 演示檔案
 
 ### demo.cache.ts (requires ts-node / 需要 ts-node)
