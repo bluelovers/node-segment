@@ -172,6 +172,13 @@ export const tests_lazy_indexof_not: [string, Parameters<typeof lazyMatchSynonym
 		],
 	],
 
+	[
+		'管子里塞了像是布片的東西',
+		[
+			'里',
+		],
+	],
+
 ];
 
 export default tests_lazy_indexof_not
