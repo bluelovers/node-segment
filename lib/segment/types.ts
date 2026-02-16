@@ -140,11 +140,11 @@ export interface IOptionsSegment extends IOptionsTableDict, IUseDefaultOptions
 export type IDICT_SYNONYM = IDICT<string>;
 
 /**
- * 停用詞字典類型
- * Stopword Dictionary Type
+ * 分隔詞字典類型
+ * Stopword (Separator) Dictionary Type
  *
- * 儲存停用詞及其存在狀態。
- * Stores stopwords and their existence status.
+ * 儲存分隔詞及其存在狀態。
+ * Stores stopwords (separators) and their existence status.
  */
 export type IDICT_STOPWORD = IDICT<boolean>;
 
@@ -194,11 +194,11 @@ export interface IOptionsDoSegment
 	convertSynonym?: boolean,
 
 	/**
-	 * 移除停用詞
-	 * Remove Stopwords
+	 * 移除分隔詞
+	 * Remove Stopwords (Separators)
 	 *
-	 * 若為 true，從結果中移除停用詞。
-	 * If true, removes stopwords from results.
+	 * 若為 true，從結果中移除分隔詞。
+	 * If true, removes stopwords (separators) from results.
 	 */
 	stripStopword?: boolean,
 

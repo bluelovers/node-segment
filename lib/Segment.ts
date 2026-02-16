@@ -500,14 +500,14 @@ export class Segment extends SegmentCore
 	}
 
 	/**
-	 * 載入停用詞字典
-	 * Load Stopword Dictionary
+	 * 載入分隔詞字典
+	 * Load Stopword (Separator) Dictionary
 	 *
-	 * 載入停用詞字典檔案到分詞器中。
-	 * 停用詞是在文字處理中需要被過濾掉的常見詞語。
+	 * 載入分隔詞字典檔案到分詞器中。
+	 * 分隔詞是用於切割字串、進行簡易斷詞的字元或詞語。
 	 *
-	 * Loads stopword dictionary file into the segmenter.
-	 * Stopwords are common words that need to be filtered out during text processing.
+	 * Loads stopword (separator) dictionary file into the segmenter.
+	 * Stopwords (separators) are characters or words used for string splitting and simple word segmentation.
 	 *
 	 * @param {string} name - 字典檔案名稱 / Dictionary file name
 	 * @returns {this} 返回實例以支援鏈式呼叫 / Returns instance for method chaining
@@ -682,7 +682,7 @@ export class Segment extends SegmentCore
 	 *   - {Boolean} simple - 是否僅返回單詞內容 / Whether to only return word content
 	 *   - {Boolean} stripPunctuation - 去除標點符號 / Remove punctuation
 	 *   - {Boolean} convertSynonym - 轉換同義詞 / Convert synonyms
-	 *   - {Boolean} stripStopword - 去除停用詞 / Remove stopwords
+	 *   - {Boolean} stripStopword - 去除分隔詞 / Remove stopwords (separators)
 	 * @returns {Array} 分詞結果陣列 / Segmentation result array
 	 */
 	override doSegment(text: string | Buffer, options: ITSOverwrite<IOptionsDoSegment, {

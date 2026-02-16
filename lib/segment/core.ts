@@ -106,8 +106,8 @@ export class SegmentCore
 	 * 字典表
 	 * Dictionary Tables
 	 *
-	 * 儲存各類字典資料，包括停用詞、同義詞等。
-	 * Stores various dictionary data, including stopwords, synonyms, etc.
+	 * 儲存各類字典資料，包括分隔詞、同義詞等。
+	 * Stores various dictionary data, including stopwords (separators), synonyms, etc.
 	 *
 	 * @type {Object}
 	 */
@@ -439,7 +439,7 @@ export class SegmentCore
 	 *   - {Boolean} simple - 是否僅返回單詞內容 / Whether to only return word content
 	 *   - {Boolean} stripPunctuation - 去除標點符號 / Remove punctuation
 	 *   - {Boolean} convertSynonym - 轉換同義詞 / Convert synonyms
-	 *   - {Boolean} stripStopword - 去除停用詞 / Remove stopwords
+	 *   - {Boolean} stripStopword - 去除分隔詞 / Remove stopwords (separators)
 	 * @returns {Array} 分詞結果陣列 / Segmentation result array
 	 */
 	doSegment(text: string | Buffer, options: ITSOverwrite<IOptionsDoSegment, {
@@ -509,7 +509,7 @@ export class SegmentCore
 			ret = this.convertSynonym(ret);
 		}
 
-		// 去除停用詞 / Remove stopwords
+		// 去除分隔詞 / Remove stopwords (separators)
 		if (options.stripStopword)
 		{
 			ret = _doSegmentStripStopword(ret, me.getDict('STOPWORD'))
