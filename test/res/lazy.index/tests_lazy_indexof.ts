@@ -5917,6 +5917,13 @@ export const tests_lazy_indexof: [string, IP['1'], IP['2']?][] = [
 		],
 	],
 
+	[
+		'但是從里夫雷城可以前往其他地下城',
+		[
+			'里',
+		],
+	],
+
 ];
 
 export default tests_lazy_indexof
