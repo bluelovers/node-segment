@@ -67,9 +67,13 @@
     "Lei Zongmin <leizongmin@gmail.com>"
   ],
   "main": "./index.js",
+  "bin": {
+    "dev-segment-cli": "./bin/cli.js"
+  },
   "directories": {
     "lib": "lib",
-    "test": "test"
+    "test": "test",
+    "bin": "bin"
   },
   "scripts": {
     "coverage": "yarn run test -- --coverage",
@@ -90,6 +94,9 @@
     "postpublish:done": "echo postpublish:done",
     "postpublishOnly:add": "npx yarn-tool root run postpublishOnly:add novel-segment @novel-segment/api-server",
     "local-delete-cache-db": "tsx ./test/lib/delete-cache.ts",
+    "local-demo-cache": "ts-node ./test/demo.cache.ts",
+    "local-demo-lazy": "tsx ./test/lib/delete-cache.ts & ts-node ./test/demo.cache.ts",
+    "cli": "tsx ./bin/cli.ts",
     "ncu": "yarn-tool ncu -u",
     "sort-package-json": "yarn-tool sort"
   },
