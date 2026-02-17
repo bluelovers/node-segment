@@ -19,6 +19,14 @@ pnpm add novel-segment
 
 ## MCP 設定 / MCP Configuration
 
+> **重要說明 / Important Note:**
+> 
+> `mcp-server.ts` 必須使用 `ts-node` 執行，**不能使用 `tsx`**。
+> `mcp-server.ts` must be executed with `ts-node`, **cannot use `tsx`**.
+> 
+> 這是因為 `@modelcontextprotocol/sdk` 使用了 ESM 模組格式，而 `tsx` 在處理某些 ESM 匯入時可能會有相容性問題。
+> This is because `@modelcontextprotocol/sdk` uses ESM module format, and `tsx` may have compatibility issues when handling certain ESM imports.
+
 ### Claude Desktop 設定 / Claude Desktop Configuration
 
 在 Claude Desktop 的設定檔中加入以下設定：
@@ -51,6 +59,19 @@ Create `.kilocode/mcp.json` in project root:
     "dev-segment-cli": {
       "command": "node",
       "args": ["${workspaceFolder}/node_modules/novel-segment/bin/mcp-server.js"]
+    }
+  }
+}
+```
+
+or
+
+```json
+{
+  "mcpServers": {
+    "dev-segment-cli": {
+      "command": "ts-node",
+      "args": ["${workspaceFolder}/node_modules/novel-segment/bin/mcp-server"]
     }
   }
 }
