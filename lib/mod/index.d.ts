@@ -1,5 +1,9 @@
 /**
  * Created by user on 2018/4/16/016.
+ *
+ * 模块索引和枚举
+ *
+ * 导出所有子模块类并定义可用模块的枚举。
  */
 import { ISubOptimizer, ISubOptimizerCreate, Optimizer, SubSModuleOptimizer } from './Optimizer';
 import { ISubTokenizer, ISubTokenizerCreate, SubSModuleTokenizer, Tokenizer } from './Tokenizer';
@@ -38,11 +42,11 @@ export declare enum ENUM_SUBMODS {
     ChsNameTokenizer = "ChsNameTokenizer",
     JpSimpleTokenizer = "JpSimpleTokenizer",
     /**
-     * 注音
+     * 注音（注音符号）识别
      */
     ZhuyinTokenizer = "ZhuyinTokenizer",
     /**
-     * 部首
+     * 部首识别（已禁用）
      */
     /**
      * 邮箱地址识别
@@ -80,9 +84,29 @@ export declare enum ENUM_SUBMODS_OTHER {
      */
     SingleTokenizer = "SingleTokenizer"
 }
+/**
+ * 子模块名称类型
+ *
+ * 所有可用子模块名称的联合类型。
+ */
 export type ENUM_SUBMODS_NAME = ENUM_SUBMODS | ENUM_SUBMODS_OTHER;
+/**
+ * 非默认模块列表
+ *
+ * 未包含在默认模块列表中的模块。
+ */
 export declare const LIST_SUBMODS_NOT_DEF: ENUM_SUBMODS[];
+/**
+ * 子模块枚举包装器
+ *
+ * 用于更方便迭代和查找的包装枚举。
+ */
 export declare const SUBMODS_LIST: import("ts-enum-util").EnumWrapper<string, typeof ENUM_SUBMODS>;
+/**
+ * 额外子模块枚举包装器
+ *
+ * 用于额外模块的包装枚举。
+ */
 export declare const SUBMODS_OTHER_LIST: import("ts-enum-util").EnumWrapper<string, typeof ENUM_SUBMODS_OTHER>;
 /**
  * 取得列表並且保持 ENUM 順序
