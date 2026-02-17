@@ -1,5 +1,19 @@
 /**
- * Created by user on 2019/4/9.
+ * 斷詞測試
+ * Word Segmentation Tests
+ *
+ * 使用 lazyMatch 函數測試斷詞結果的準確性。
+ * 驗證斷詞結果是否包含預期的詞彙組合。
+ *
+ * Tests word segmentation accuracy using lazyMatch functions.
+ * Verifies if segmentation results contain expected word combinations.
+ *
+ * @created 2019/4/9
+ * @see lazyMatch
+ * @see lazyMatch002
+ * @see lazyMatchNot
+ * @see lazyMatchSynonym001
+ * @see lazyMatchSynonym001Not
  */
 
 /// <reference types="mocha" />
@@ -12,6 +26,9 @@ import { chai, relative, expect, path, assert, util, mochaAsync } from './_local
 // @ts-ignore
 import { ITest } from 'mocha';
 
+/**
+ * 導入測試數據 / Import test data
+ */
 import {
 	tests_lazy_indexof,
 	tests_lazy_array,
@@ -38,12 +55,20 @@ console.setOptions({
 });
 
 // @ts-ignore
+/**
+ * 斷詞測試套件 / Word Segmentation Test Suite
+ */
 describe(relative(__filename), () =>
 {
+	/** 當前測試 / Current test */
 	let currentTest: ITest;
 
+	/** 斷詞器實例 / Segmenter instance */
 	let segment: Segment = null;
 
+	/**
+	 * 測試前設置 / Test setup
+	 */
 	before(function ()
 	{
 		mochaSetup(this);
@@ -55,17 +80,22 @@ describe(relative(__filename), () =>
 		});
 	});
 
-	// @ts-ignore
+	 /**
+	 * 每個測試前 / Before each test
+	 */
 	beforeEach(function ()
 	{
-		// @ts-ignore
+	 	// @ts-ignore
 		currentTest = this.currentTest as ITest;
 
 		//console.log('it:before', currentTest.title);
 		//console.log('it:before', currentTest.fullTitle());
 	});
 
-	// @ts-ignore
+	 /**
+	 * 有序匹配測試 / Ordered match tests
+	 * @see tests_lazy_base
+	 */
 	describe(`tests_lazy_base`, () =>
 	{
 		tests_lazy_base.forEach(function (args)
@@ -83,7 +113,10 @@ describe(relative(__filename), () =>
 		});
 	});
 
-	// @ts-ignore
+	 /**
+	 * 多選匹配測試 / Multi-choice match tests
+	 * @see tests_lazy_array
+	 */
 	describe(`tests_lazy_array`, () =>
 	{
 		tests_lazy_array.forEach(function (args)
@@ -101,7 +134,10 @@ describe(relative(__filename), () =>
 		});
 	});
 
-	// @ts-ignore
+	 /**
+	 * 同義詞匹配測試 / Synonym match tests
+	 * @see tests_lazy_indexof
+	 */
 	describe(`tests_lazy_indexof`, () =>
 	{
 		tests_lazy_indexof.forEach(function (args)
@@ -120,7 +156,10 @@ describe(relative(__filename), () =>
 
 	});
 
-	// @ts-ignore
+	 /**
+	 * 同義詞反向匹配測試 / Synonym negative match tests
+	 * @see tests_lazy_indexof_not
+	 */
 	describe(`tests_lazy_indexof_not`, () =>
 	{
 		tests_lazy_indexof_not.forEach(function (args)
@@ -139,7 +178,10 @@ describe(relative(__filename), () =>
 
 	});
 
-	// @ts-ignore
+	 /**
+	 * 反向匹配測試 / Negative match tests
+	 * @see tests_lazy_base_not
+	 */
 	describe(`tests_lazy_base_not`, () =>
 	{
 		tests_lazy_base_not.forEach(function (args)
@@ -157,6 +199,12 @@ describe(relative(__filename), () =>
 		});
 	});
 
+	/**
+	 * 斷詞處理函數 / Segmentation handler function
+	 * @param a - 待斷詞字串 / String to segment
+	 * @param options - 斷詞選項 / Segmentation options
+	 * @returns 斷詞結果 / Segmentation result
+	 */
 	function doSegment(a: string, options?: IOptionsDoSegment)
 	{
 		return segment.doSegment(a, {

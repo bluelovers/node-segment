@@ -18,6 +18,7 @@ if (requireResolve('chai-asserttype-extra'))
 }
 else
 {
+	// @ts-ignore
 	chai = _chai;
 }
 
