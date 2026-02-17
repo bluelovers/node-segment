@@ -1,0 +1,163 @@
+{
+  "mcpServers": {
+    "dev-segment-cli": {
+      "command": "node",
+      "args": [
+        "${workspaceFolder}/packages/novel-segment/bin/cli.js"
+      ],
+      "description": "中文分詞測試 CLI 工具 / Chinese Word Segmentation Test CLI Tool",
+      "tools": [
+        {
+          "name": "segment_text",
+          "description": "對文字進行分詞測試 / Perform segmentation test on text",
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "text": {
+                "type": "string",
+                "description": "待分詞的文字內容 / Text content to segment"
+              },
+              "expectedFull": {
+                "type": "string",
+                "description": "預期的完整分詞結果 / Expected full segmentation result"
+              },
+              "expectedContains": {
+                "type": "array",
+                "items": {
+                  "oneOf": [
+                    { "type": "string" },
+                    { "type": "array", "items": { "type": "string" } }
+                  ]
+                },
+                "description": "預期應該包含的詞彙（有序匹配）/ Expected words to contain (ordered match)"
+              },
+              "expectedContainsNot": {
+                "type": "array",
+                "items": {
+                  "oneOf": [
+                    { "type": "string" },
+                    { "type": "array", "items": { "type": "string" } }
+                  ]
+                },
+                "description": "預期不應該包含的詞彙 / Words that should NOT be contained"
+              },
+              "expectedIndexOf": {
+                "type": "array",
+                "items": {
+                  "oneOf": [
+                    { "type": "string" },
+                    { "type": "array", "items": { "type": "string" } }
+                  ]
+                },
+                "description": "預期轉換後應該包含的字詞（同義詞匹配）/ Expected words after synonym transformation"
+              },
+              "expectedIndexOfNot": {
+                "type": "array",
+                "items": {
+                  "oneOf": [
+                    { "type": "string" },
+                    { "type": "array", "items": { "type": "string" } }
+                  ]
+                },
+                "description": "預期轉換後不應該包含的字詞 / Words that should NOT exist after transformation"
+              },
+              "dictEntries": {
+                "type": "array",
+                "items": {
+                  "type": "array"
+                },
+                "description": "額外的字典項目 / Additional dictionary entries"
+              },
+              "synonymEntries": {
+                "type": "array",
+                "items": {
+                  "type": "array"
+                },
+                "description": "額外的同義詞項目 / Additional synonym entries"
+              },
+              "blacklistWords": {
+                "type": "array",
+                "items": { "type": "string" },
+                "description": "黑名單詞彙 / Blacklist words"
+              },
+              "debugEach": {
+                "type": "boolean",
+                "default": false,
+                "description": "逐行除錯模式 / Line-by-line debug mode"
+              }
+            },
+            "required": ["text"]
+          },
+          "examples": [
+            {
+              "description": "基本分詞測試 / Basic segmentation test",
+              "input": {
+                "text": "這是一個測試句子"
+              }
+            },
+            {
+              "description": "帶有預期結果的測試 / Test with expected result",
+              "input": {
+                "text": "胡锦涛出席APEC领导人会议后回京",
+                "expectedContains": ["会议", "回京"]
+              }
+            },
+            {
+              "description": "多種驗證類型 / Multiple validation types",
+              "input": {
+                "text": "這份毫不守舊的率直",
+                "expectedContainsNot": ["份毫"]
+              }
+            }
+          ]
+        },
+        {
+          "name": "segment_file",
+          "description": "從檔案讀取文字進行分詞測試 / Read text from file for segmentation test",
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "file": {
+                "type": "string",
+                "description": "要讀取文字的檔案路徑 / File path to read text from"
+              },
+              "expectedFullFile": {
+                "type": "string",
+                "description": "要讀取預期結果的檔案路徑 / File path to read expected result from"
+              },
+              "outputFile": {
+                "type": "string",
+                "description": "輸出 JSON 結果的檔案路徑 / File path to write JSON result"
+              },
+              "outputFormat": {
+                "type": "string",
+                "enum": ["json", "text"],
+                "default": "json",
+                "description": "輸出格式 / Output format"
+              }
+            },
+            "required": ["file"]
+          }
+        },
+        {
+          "name": "segment_config",
+          "description": "使用設定檔進行分詞測試 / Use config file for segmentation test",
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "config": {
+                "type": "string",
+                "description": "設定檔路徑（支援 JSON/JS/TS）/ Config file path (supports JSON/JS/TS)"
+              },
+              "text": {
+                "type": "string",
+                "description": "覆蓋設定檔中的文字（選填）/ Override text from config (optional)"
+              }
+            },
+            "required": ["config"]
+          }
+        }
+      ]
+    }
+  }
+}
