@@ -193,6 +193,20 @@ export const tests_lazy_indexof_not: [string, IP['1'], IP['2']?][] = [
 		],
 	],
 
+	[
+		'我要擊发比較大的魔法',
+		[
+			'发',
+		],
+	],
+
+	[
+		'因為我覺得那麼做應該可以讓她處于天然的自失狀態',
+		[
+			'于',
+		],
+	],
+
 ];
 
 export default tests_lazy_indexof_not

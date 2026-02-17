@@ -462,6 +462,13 @@ export const tests_fixme_base_not: typeof tests_lazy_index['tests_lazy_base_not'
 		],
 	],
 
+	[
+		'因為我覺得那麼做應該可以讓她處于天然的自失狀態',
+		[
+			['她處'],
+		],
+	],
+
 ];
 
 /**
