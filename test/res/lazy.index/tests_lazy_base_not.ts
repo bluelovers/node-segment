@@ -5,7 +5,19 @@
 import { lazyMatchNot } from '@novel-segment/assert';
 
 /**
- * 分析後不應該存在符合以下結果
+ * 反向有序匹配測試數據
+ * Reverse Ordered Match Test Data
+ *
+ * 用於測試斷詞結果不應該包含指定的詞彙（反向測試）。
+ * 用於 lazyMatchNot 函數的測試資料。
+ *
+ * Test data for verifying that segmentation results should NOT contain specified words.
+ * Used for lazyMatchNot function testing.
+ *
+ * 測試資料結構 / Test Data Structure
+ * [原始句子, 不應該存在的詞彙, 選項?]
+ *
+ * @see lazyMatchNot
  */
 export const tests_lazy_base_not: [string, Parameters<typeof lazyMatchNot>['1'], Parameters<typeof lazyMatchNot>['2']?][] = [
 

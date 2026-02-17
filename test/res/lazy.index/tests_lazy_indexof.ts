@@ -7,7 +7,19 @@ import { lazyMatchSynonym001 } from '@novel-segment/assert';
 type IP = Parameters<typeof lazyMatchSynonym001>;
 
 /**
- * 分析轉換後應該要具有以下字詞
+ * 同義詞索引匹配測試數據
+ * Synonym Index Match Test Data
+ *
+ * 用於測試同義詞轉換結果是否包含指定的字符。
+ * 用於 lazyMatchSynonym001 函數的測試資料。
+ *
+ * Test data for verifying if synonym conversion results contain specified characters.
+ * Used for lazyMatchSynonym001 function testing.
+ *
+ * 測試資料結構 / Test Data Structure
+ * [原始句子, 應該包含的字符, 選項?]
+ *
+ * @see lazyMatchSynonym001
  */
 export const tests_lazy_indexof: [string, IP['1'], IP['2']?][] = [
 

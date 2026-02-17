@@ -1,14 +1,26 @@
 /**
- * Created by user on 2019/4/12.
+ * 已知問題測試數據
+ * Known Issues Test Data
  *
- * 現存 因為算法或者字典優先權之類的問題導致 可能還無法去修正處理的
- * (有部分可能已經修正 但因為惰性問題 沒有確認)
+ * 記錄因算法或字典優先權等問題導致無法正確處理的測試案例。
+ * 部分案例可能已修復但尚未確認。
+ *
+ * Test cases that cannot be correctly processed due to algorithm or dictionary priority issues.
+ * Some cases may have been fixed but not yet confirmed.
+ *
+ * @created 2019/4/12
+ * @see lazyMatch
+ * @see lazyMatchSynonym001Not
  */
 
 import tests_lazy_index from './lazy.index';
 import { sortTests } from '../lib/util';
 import { lazyMatchSynonym001Not } from '@novel-segment/assert';
 
+/**
+ * 預期詞彙存在 / Expected words presence
+ * 類型與 tests_lazy_base 相同 / Same type as tests_lazy_base
+ */
 export const tests_fixme_base: typeof tests_lazy_index['tests_lazy_base'] = [
 
 	[
@@ -141,6 +153,10 @@ export const tests_fixme_base: typeof tests_lazy_index['tests_lazy_base'] = [
 
 ];
 
+/**
+ * 預期詞彙不存在 / Expected words absence
+ * 類型與 tests_lazy_base_not 相同 / Same type as tests_lazy_base_not
+ */
 export const tests_fixme_base_not: typeof tests_lazy_index['tests_lazy_base_not'] = [
 
 	[
@@ -448,6 +464,10 @@ export const tests_fixme_base_not: typeof tests_lazy_index['tests_lazy_base_not'
 
 ];
 
+/**
+ * 多選匹配測試 / Multi-choice match tests
+ * 類型與 tests_lazy_array 相同 / Same type as tests_lazy_array
+ */
 export const tests_fixme_array: typeof tests_lazy_index['tests_lazy_array'] = [
 
 	[
@@ -459,6 +479,10 @@ export const tests_fixme_array: typeof tests_lazy_index['tests_lazy_array'] = [
 
 ];
 
+/**
+ * 同義詞索引測試 / Synonym index tests
+ * 類型與 tests_lazy_indexof 相同 / Same type as tests_lazy_indexof
+ */
 export const tests_fixme_indexof: typeof tests_lazy_index['tests_lazy_indexof'] = [
 
 	[
@@ -1234,7 +1258,8 @@ export const tests_fixme_indexof: typeof tests_lazy_index['tests_lazy_indexof'] 
 ];
 
 /**
- * 分析轉換後不應該具有以下字詞
+ * 同義詞索引反向測試 / Synonym index negative tests
+ * 分析轉換後不應該具有以下字詞 / Words that should NOT be present after segmentation
  */
 export const tests_fixme_indexof_not: [string, Parameters<typeof lazyMatchSynonym001Not>['1'], Parameters<typeof lazyMatchSynonym001Not>['2']?][] = [
 

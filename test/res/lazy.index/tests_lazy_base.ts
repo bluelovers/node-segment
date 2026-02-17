@@ -5,7 +5,19 @@
 import { lazyMatch } from '@novel-segment/assert';
 
 /**
- * 分析後應該要符合以下結果
+ * 有序匹配測試數據
+ * Ordered Match Test Data
+ *
+ * 用於測試斷詞結果是否按順序包含指定的詞彙。
+ * 用於 lazyMatch 函數的測試資料。
+ *
+ * Test data for verifying if segmentation results contain specified words in order.
+ * Used for lazyMatch function testing.
+ *
+ * 測試資料結構 / Test Data Structure
+ * [原始句子, 預期詞彙陣列, 選項?]
+ *
+ * @see lazyMatch
  */
 export const tests_lazy_base: [string, Parameters<typeof lazyMatch>['1'], Parameters<typeof lazyMatch>['2']?][] = [
 

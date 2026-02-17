@@ -5,7 +5,19 @@
 import { lazyMatch002 } from '@novel-segment/assert';
 
 /**
- * 分析後應該要符合以下其中一個結果
+ * 多選匹配測試數據
+ * Multiple Choice Match Test Data
+ *
+ * 用於測試斷詞結果是否符合多個可能結果中的任意一個。
+ * 用於 lazyMatch002 函數的測試資料。
+ *
+ * Test data for verifying if segmentation results match any of multiple possible results.
+ * Used for lazyMatch002 function testing.
+ *
+ * 測試資料結構 / Test Data Structure
+ * [原始句子, 多個預期詞彙陣列, 選項?]
+ *
+ * @see lazyMatch002
  */
 export const tests_lazy_array: [string, Parameters<typeof lazyMatch002>['1'], Parameters<typeof lazyMatch002>['2']?][] = [
 

@@ -4,10 +4,24 @@
 
 import { lazyMatchSynonym001Not } from '@novel-segment/assert';
 
+type IP = Parameters<typeof lazyMatchSynonym001Not>;
+
 /**
- * 分析轉換後不應該具有以下字詞
+ * 同義詞索引匹配測試數據 - 負向測試
+ * Synonym Index Match Test Data - Negative Test
+ *
+ * 用於測試同義詞轉換結果不應該包含指定的字符。
+ * 用於 lazyMatchSynonym001Not 函數的測試資料。
+ *
+ * Test data for verifying if synonym conversion results should NOT contain specified characters.
+ * Used for lazyMatchSynonym001Not function testing.
+ *
+ * 測試資料結構 / Test Data Structure
+ * [原始句子, 不應該包含的字符, 選項?]
+ *
+ * @see lazyMatchSynonym001Not
  */
-export const tests_lazy_indexof_not: [string, Parameters<typeof lazyMatchSynonym001Not>['1'], Parameters<typeof lazyMatchSynonym001Not>['2']?][] = [
+export const tests_lazy_indexof_not: [string, IP['1'], IP['2']?][] = [
 
 	[
 		'那是里靈魂的世界。',
