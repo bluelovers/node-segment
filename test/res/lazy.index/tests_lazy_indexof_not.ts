@@ -207,6 +207,13 @@ export const tests_lazy_indexof_not: [string, IP['1'], IP['2']?][] = [
 		],
 	],
 
+	[
+		'於是就攻占了它',
+		[
+			'占',
+		],
+	],
+
 ];
 
 export default tests_lazy_indexof_not
