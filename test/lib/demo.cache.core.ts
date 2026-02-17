@@ -20,6 +20,7 @@ import { join } from 'upath2';
 import { TableDict } from '@novel-segment/table-dict';
 import { TableDictSynonym } from '@novel-segment/table-synonym';
 import { Segment as SegmentBase } from '../../lib/Segment';
+import { toStringArray } from './util';
 
 // =============================================================================
 // 被註解的測試變數 / Commented Test Variables
@@ -265,6 +266,10 @@ const {
 	text_new2: output_text2,
 	changed,
 } = printPrettyDiff(text.toString(), segment.stringify(ret));
+
+console.log(toStringArray(ret).join('/'));
+
+console.gray("------------------");
 
 // 若文字有變更，以紅色輸出警告
 // If text has changed, output warning in red
