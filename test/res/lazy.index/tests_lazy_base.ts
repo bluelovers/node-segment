@@ -630,6 +630,27 @@ export const tests_lazy_base: [string, Parameters<typeof lazyMatch>['1'], Parame
 		],
 	],
 
+	[
+		'澈底分工的制度',
+		[
+			['澈底', '徹底'],
+		],
+	],
+
+	[
+		'輪流填彈和發射一樣',
+		[
+			['填彈'],
+		],
+	],
+
+	[
+		'最初這麼做的人好像是荷蘭親王毛里茨',
+		[
+			['荷蘭'],
+		],
+	],
+
 ];
 
 export default tests_lazy_base

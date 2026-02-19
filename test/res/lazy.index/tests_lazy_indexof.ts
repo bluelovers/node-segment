@@ -5924,6 +5924,13 @@ export const tests_lazy_indexof: [string, IP['1'], IP['2']?][] = [
 		],
 	],
 
+	[
+		'最初這麼做的人好像是荷蘭親王毛里茨',
+		[
+			'里',
+		],
+	],
+
 ];
 
 export default tests_lazy_indexof
