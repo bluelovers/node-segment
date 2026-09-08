@@ -13,19 +13,20 @@
  * @see lazyMatch
  */
 
-import Mocha = require('mocha');
-import fs = require('fs');
-import path = require('path');
-import yargs = require('yargs');
+import Mocha from 'mocha';
+import fs from 'fs';
+import path from 'path';
+import yargs from 'yargs';
+import { hideBin } from 'yargs/helpers';
 
 /** 命令列參數 / Command line arguments */
-let cli = yargs
-	.argv
+let cli = yargs(hideBin(process.argv))
+	.parseSync()
 ;
 
 // @ts-ignore
 /** Mocha 測試執行器 / Mocha test runner */
-const mocha = new Mocha(cli);
+const mocha = new Mocha(cli as any);
 
 /** 加載已知問題測試檔案 / Load known issues test file */
 mocha.addFile(

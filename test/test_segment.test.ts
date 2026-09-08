@@ -58,6 +58,7 @@ describe(relative(__filename), function ()
 		{
 			it(args[0], function ()
 			{
+				// @ts-ignore
 				equal(...args);
 			});
 		});
