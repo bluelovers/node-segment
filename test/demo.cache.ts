@@ -2,6 +2,7 @@
  * Created by user on 2018/4/15/015.
  */
 
+import { POSTAG } from '@novel-segment/postag/lib/postag/ids';
 import { demoSegmentCacheCore } from './lib/demo.cache.core';
 
 /**
@@ -35,11 +36,11 @@ let DEBUG_EACH: boolean;
  */
 let text = `
 
-不仅能够撤退，亦可用于奇袭。111
-奇袭。111
-亦可用于
-用于奇袭
-确认周围没有人影后，
+「………………魔法師人數眾多這一點帶來的威脅比想像中還要大呢。最重要的一點是,他們可以不在意再次使用時間持續進攻。就好比分成好幾支十字弓隊或滑膛槍隊,輪流填彈和發射一樣。要是記得沒錯,最初這麼做的人好像是荷蘭親王毛里茨。」
+
+玩家戰隊是採取集中使用的魔法種類、澈底分工的制度,以提升隊伍整體的應對能力為目標進行團隊合作。能夠生出多種下屬的史佳爾應該可以從他們身上學到很多。
+
+徹底、澈底
 
 `;
 
@@ -61,10 +62,12 @@ export default demoSegmentCacheCore(file, text, DEBUG_EACH, {
 	 * Used to pass additional dictionary, synonym, and blacklist data.
 	 */
 	hookData: {
-		/*
+
 		list_dict: [
-			[['形參', 0x100000, 0]],
+			// [['占有的', 0x8001000, 0]],
+			// [['擊发', null, 500]],
 		],
+		/*
 		list_synonym: [
 			[['頁籤', '選項卡', '標籤頁', '標簽頁']],
 		],
