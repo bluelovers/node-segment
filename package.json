@@ -127,7 +127,9 @@
     "uni-string": "^2.0.7"
   },
   "devDependencies": {
-    "@novel-segment/util": "^1.0.79"
+    "@novel-segment/util": "^1.0.79",
+    "mocha": "<11 >=10.8.2",
+    "ts-mocha": "<11 >=10.1.0"
   },
   "gitHead": "36b3420066533710322716157492f3c6980f7b99"
 }
