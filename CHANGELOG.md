@@ -3,6 +3,89 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.7.122](https://github.com/bluelovers/ws-segment/compare/novel-segment@2.7.121...novel-segment@2.7.122) (2026-09-08)
+
+
+### FIXME
+
+* **dict:** 新增測試案例涵蓋「假使于蕾亞」、「由于韋恩」、「誕生于里伯」等情境
+
+
+
+### 🐛　Bug Fixes
+
+* **dict:** 修正「于」字在特定語境下的斷詞問題 ([7b81623](https://github.com/bluelovers/ws-segment/commit/7b816237f4a3b4a097b1af5fbbafb9105d059a19))
+* **dict:** fix `管子里塞了像是布片的東西` ([aa52dd4](https://github.com/bluelovers/ws-segment/commit/aa52dd4e755ac2eef2cbe084f783e10e379c3717))
+* **novel-segment:** 修正 MCP Server 配置使用 ts-node 執行 ([c00ccc9](https://github.com/bluelovers/ws-segment/commit/c00ccc9667efbf18779ba6d9597ce7a312aec41c))
+* **novel-segment:** 添加「采」字同義詞字典與測試案例 ([57b8a0b](https://github.com/bluelovers/ws-segment/commit/57b8a0bcc8fdd134f265d2812e06e6dc2fa21908))
+* **novel-segment:** 添加自定义忽略模式选项 & 防止读取 README.md ([a580dd2](https://github.com/bluelovers/ws-segment/commit/a580dd20a43f45b420dd9bd8dd608c031ca2f912))
+* **segment-dict:** 新增「填彈」「荷蘭」「里茨」「澈底」詞條與對應測試案例 ([899a6bd](https://github.com/bluelovers/ws-segment/commit/899a6bdba7c00bd0b63263aeefe46bac6a33447d))
+* **segment-dict:** 新增「里夫」名稱詞條與對應測試案例 ([48b63ea](https://github.com/bluelovers/ws-segment/commit/48b63ea9629d64bab3533d9c37bc45f16d179e0e))
+* **segment-dict:** 新增「攻佔了」同義詞對應與測試案例 ([36cfceb](https://github.com/bluelovers/ws-segment/commit/36cfceb21f7180e7a344e9d4f0f1009d0077ba59))
+* **segment-dict:** fix `我要擊发比較大的魔法`, `讓她處于天然` ([d158a86](https://github.com/bluelovers/ws-segment/commit/d158a8620967567641bf3f9c36642d0c854914c3))
+* **segment-dict:** 添加“佔有的”词条及同义词映射 ([fd9c786](https://github.com/bluelovers/ws-segment/commit/fd9c7866f6a7631473140a3efa6aa45fcc83624a))
+
+
+### ✨　Features
+
+* **@novel-segment/assert:** 新增 notThrowError 選項支援回傳匹配結果 ([4b2f826](https://github.com/bluelovers/ws-segment/commit/4b2f826b02383de4c25f9ab532db0728632777e7))
+* **novel-segment:** 新增 MCP Server 支援 AI 助手呼叫分詞功能 ([5808dec](https://github.com/bluelovers/ws-segment/commit/5808dec2cffce0edb2fa5d933dd18cee0355615f))
+* **novel-segment:** 擴充 CLI 工具支援多種匹配模式與設定檔載入 ([5b999d6](https://github.com/bluelovers/ws-segment/commit/5b999d61a804e8ae478ab34550b5252df4c247e4))
+* **novel-segment:** 新增 CLI 工具供 AI agent 自動化分詞測試使用 ([66a9ed8](https://github.com/bluelovers/ws-segment/commit/66a9ed87840614b3609428dc003c4f4b1a04bbab))
+
+
+### 📦　Code Refactoring
+
+* **core:** 優化 TypeScript 類型宣告與模組導入方式 ([f1ef911](https://github.com/bluelovers/ws-segment/commit/f1ef911e1e0de1faecbb3d7604f8942cc476584a))
+* **novel-segment:** 重构缓存测试模块并新增钩子系统 ([114f2b3](https://github.com/bluelovers/ws-segment/commit/114f2b3dc2895effee8a3a9517a4399bab0a7e0c))
+
+
+### 📚　Documentation
+
+* 將「停用詞」術語統一更新為「分隔詞」並新增專案規範文件 ([63f285d](https://github.com/bluelovers/ws-segment/commit/63f285dc5399afbfbb417c43b7404bd58da3de6b))
+* **novel-segment:** 為 Segment 主類別添加完整的中英雙語 JSDoc 文檔註釋 ([3f7b7ea](https://github.com/bluelovers/ws-segment/commit/3f7b7eaf1331a0833de38d90d696ca6bb04d547c))
+* **novel-segment:** 為 novel-segment 套件的核心模組添加完整的中英雙語 JSDoc 文檔註釋 ([d1bef67](https://github.com/bluelovers/ws-segment/commit/d1bef67759d95f2db9a00fdf714740446a54300c))
+* **novel-segment:** 添加子模块索引文档 ([9029e7b](https://github.com/bluelovers/ws-segment/commit/9029e7b4c32ed42520ecb82513bd5d407745c4b2))
+* **novel-segment:** 为多个分词器模块添加完整的 JSDoc 文档 ([9d2b7ea](https://github.com/bluelovers/ws-segment/commit/9d2b7ea7250dc48550f52650e397cf6aa85ae655))
+* **novel-segment:** 为 ChsNameTokenizer 添加完整的 JSDoc 文档 ([4527f8a](https://github.com/bluelovers/ws-segment/commit/4527f8ac55611ef76de9dfa652d4c1d0c2a8ef5d))
+* **novel-segment:** 为 ChsNameOptimizer 添加完整的 JSDoc 文档 ([32f5d4c](https://github.com/bluelovers/ws-segment/commit/32f5d4c6e8d9e25b2c57694e081312f234ad4006))
+* **novel-segment:** 为 DatetimeOptimizer 添加完整的 JSDoc 文档 ([0c16fae](https://github.com/bluelovers/ws-segment/commit/0c16faed67d87f49dd9f5b93d7b61bc285dbebe1))
+* **novel-segment:** 为 DictOptimizer 和 DictTokenizer 添加完整的 JSDoc 文档 ([19253d5](https://github.com/bluelovers/ws-segment/commit/19253d53f8f7bf1863fcc5209028963db818a25e))
+* **novel-segment:** 为 JpSimpleTokenizer 添加完整的 JSDoc 文档 ([e515571](https://github.com/bluelovers/ws-segment/commit/e5155717323114e9aeae38e795cf00090dfb8586))
+* **novel-segment:** 为 ForeignTokenizer 添加完整的 JSDoc 文档 ([dda6575](https://github.com/bluelovers/ws-segment/commit/dda6575fc891ced34a21fafdc034e2e9a370a4ce))
+* **novel-segment:** 为 PunctuationTokenizer 添加完整的 JSDoc 文档 ([8dcac8b](https://github.com/bluelovers/ws-segment/commit/8dcac8ba53fccc2ff018f44d5b09a4124aa33b16))
+* **novel-segment:** 为 ZhtSynonymOptimizer 添加完整的 JSDoc 文档 ([288595a](https://github.com/bluelovers/ws-segment/commit/288595adae2caa81e2484bcd9e5af0f5e3d5b35e))
+* **novel-segment:** 为模块文件添加 JSDoc 文档 ([421ab03](https://github.com/bluelovers/ws-segment/commit/421ab0346bcf4169f85790d028ab7353ab28a7b1))
+* **novel-segment:** 添加测试目录 README 文档 ([574085b](https://github.com/bluelovers/ws-segment/commit/574085bbd1e1fd559f7314e5869545629090b57b))
+
+
+### 🚨　Tests
+
+* **mocha:** 鎖定 mocha 版本 ([9c35f75](https://github.com/bluelovers/ws-segment/commit/9c35f75013412635386d34212b2dd7daa59aff4e))
+* **novel-segment:** 註解 .mocharc.yml 中的 require 設定 ([51cbeee](https://github.com/bluelovers/ws-segment/commit/51cbeeeb918b470133cf41b24fee06e51a520dc9))
+* **novel-segment:** 改善測試檔案的 JSDoc 文檔 ([ca918e2](https://github.com/bluelovers/ws-segment/commit/ca918e27a295b88a711ee5f8f2ecf15936da125a))
+* **novel-segment:** 新增測試檔案類型與執行方式說明 ([1c70f80](https://github.com/bluelovers/ws-segment/commit/1c70f8059a4389f1d0bba5b32ee3b0e30bc9647b))
+* **novel-segment:** 添加“發配”分词测试用例及分词字典 ([f3aadb2](https://github.com/bluelovers/ws-segment/commit/f3aadb27596e7c11fdc9515d252856cd39a7addb))
+* **novel-segment:** 重构缓存测试文件结构 ([3b5a3db](https://github.com/bluelovers/ws-segment/commit/3b5a3db3835ecd2c6c572c85929a5803aeb29941))
+
+
+### 🛠　Build System
+
+* **@novel-segment/assert:** refactor lazyMatch and add Chinese char conversions ([4d95315](https://github.com/bluelovers/ws-segment/commit/4d95315ddbe73c82306010b08c6cb3aecfc0f845))
+* **novel-segment:** 為 Segment 主類別與 fs/get 模組新增 ignore 選項。 ([f0cacdd](https://github.com/bluelovers/ws-segment/commit/f0cacddd29fbfec5c31d2fad4561eb74ffa555a7))
+* **novel-segment:** 提取颜色数据至独立模块并添加 JSDoc 文档 ([cbcfdaf](https://github.com/bluelovers/ws-segment/commit/cbcfdafbacce9c3300890fdeb54a6839f9f53d3c))
+* **test:** 全域更新 Jest 配置與測試環境支援 ([1d67399](https://github.com/bluelovers/ws-segment/commit/1d67399deb009b9ca9a8e394112e95c41752c1a4))
+
+
+### ♻️　Chores
+
+* save repo before new version ([ea6e52b](https://github.com/bluelovers/ws-segment/commit/ea6e52bbe0c06aaf5d943cfb890c6da3c59eb004))
+* **config:** 優化 monorepo 工作區配置與 pnpm 管理設定 ([fc3745f](https://github.com/bluelovers/ws-segment/commit/fc3745f10bc7b8da55261ca4e3bcf37ad5ceb89f))
+* **deps:** 升級多個依賴套件版本並改善測試文檔 ([a144f12](https://github.com/bluelovers/ws-segment/commit/a144f128ca9a229053287e3aa1d2a3b600531fd4))
+* **dict:** 新增「滑膛槍」詞彙至懶加載字典 ([0d4713e](https://github.com/bluelovers/ws-segment/commit/0d4713e0c8168ec561e3750be878585862b2c3b6))
+
+
+
 ## [2.7.121](https://github.com/bluelovers/ws-segment/compare/novel-segment@2.7.120...novel-segment@2.7.121) (2024-11-09)
 
 
