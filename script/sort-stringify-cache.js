@@ -276,12 +276,12 @@ function getCid(w) {
 function SortList(ls) {
     // @ts-ignore
     return ls.sort(function (a, b) {
-        if (a.line_type == 2 /* EnumLineType.COMMENT_TAG */
-            || b.line_type == 2 /* EnumLineType.COMMENT_TAG */) {
+        if (a.line_type == util_compare_1.EnumLineType.COMMENT_TAG
+            || b.line_type == util_compare_1.EnumLineType.COMMENT_TAG) {
             return (a.index - b.index);
         }
-        else if (a.line_type == 1 /* EnumLineType.COMMENT */
-            || b.line_type == 1 /* EnumLineType.COMMENT */) {
+        else if (a.line_type == util_compare_1.EnumLineType.COMMENT
+            || b.line_type == util_compare_1.EnumLineType.COMMENT) {
             return (a.index - b.index);
         }
         let ret = (0, util_1.zhDictCompare)(a.cjk_id, b.cjk_id)
