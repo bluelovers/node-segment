@@ -1354,6 +1354,28 @@ export const tests_fixme_indexof_not: [string, Parameters<typeof lazyMatchSynony
 		],
 	],
 
+	[
+		'看他在這種隨時都可能布下陷阱的要塞里昂首闊步',
+		[
+			'里',
+		],
+	],
+
+	[
+		'排列在機庫里的全都是從第三兵工廠購入的特製型機體',
+		[
+			'里',
+		],
+	],
+
+
+	[
+		'雖說會占掉機庫的不少空間',
+		[
+			'占',
+		],
+	],
+
 ];
 
 sortTests(tests_fixme_base);

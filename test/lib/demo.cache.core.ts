@@ -222,7 +222,12 @@ if (file)
 
 // 移除文字前後的空白字元
 // Remove leading and trailing whitespace from text
-text = text.replace(/^\s+|\s+$/g, '');
+text = text
+	.replace(/^\s+|\s+$/g, '')
+	.replace(/[ 　]\n/g, '\n')
+	.replace(/\n\s*\n\s*\n[\n\s]*/g, '\n\n')
+	.replace(/\n{3,}/g, '\n\n')
+;
 
 let ret: IWordDebug[];
 
