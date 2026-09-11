@@ -3,6 +3,28 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.7.123](https://github.com/bluelovers/ws-segment/compare/novel-segment@2.7.122...novel-segment@2.7.123) (2026-09-11)
+
+
+
+### 🐛　Bug Fixes
+
+* **dict:** 更新詞典數據與新增測試案例 ([8382ba3](https://github.com/bluelovers/ws-segment/commit/8382ba3e64e20d83e181b7a77a0340bdc48d827b))
+* **dict:** 更新詞典數據與新增測試案例 ([31eaeb4](https://github.com/bluelovers/ws-segment/commit/31eaeb4cdaf32ae9b3a17fc8c89a4b5cf3786cb7))
+
+
+### 📦　Code Refactoring
+
+* **novel-segment:** 優化程式碼結構與類型定義 ([d49c44c](https://github.com/bluelovers/ws-segment/commit/d49c44c965afaf2fc908fd1055f0a1f418c14753))
+
+
+### ♻️　Chores
+
+* save repo before new version ([4fedc94](https://github.com/bluelovers/ws-segment/commit/4fedc9459db5cd201a8e01ef53bc521563022373))
+* save repo before new version ([8f7e8fc](https://github.com/bluelovers/ws-segment/commit/8f7e8fcd8daf3309183a88f773635db8b6021841))
+
+
+
 ## [2.7.122](https://github.com/bluelovers/ws-segment/compare/novel-segment@2.7.121...novel-segment@2.7.122) (2026-09-08)
 
 
