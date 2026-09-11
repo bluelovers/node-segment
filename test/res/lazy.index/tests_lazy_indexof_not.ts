@@ -214,6 +214,20 @@ export const tests_lazy_indexof_not: [string, IP['1'], IP['2']?][] = [
 		],
 	],
 
+	[
+		'斗鬼神流',
+		[
+			'斗',
+		],
+	],
+
+	[
+		'更何况現場只有余能舆敵人相抗衡',
+		[
+			'余',
+		],
+	],
+
 ];
 
 export default tests_lazy_indexof_not
