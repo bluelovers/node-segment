@@ -68,11 +68,40 @@ https://segment-api.bluelovers.now.sh/?input=从时间上来说是过了数秒�
 ## 安装
 
 ```bash
-npm install novel-segment
+pnpm install novel-segment
 ```
 
 * npm: [novel-segment](https://www.npmjs.com/package/novel-segment)
 * github: [novel-segment](https://github.com/bluelovers/ws-segment/tree/master/packages/novel-segment)
+
+## ESM / MJS 匯入方式
+
+在**不使用**可以自動處理 cjs/mjs import 的機制（例如 `tsx`）的情況下，
+ESM / `.mjs` 內要引用本模組，有以下方式：
+
+### 方式一：`createRequire`
+
+```javascript
+import { createRequire } from 'node:module';
+
+const require = createRequire(import.meta.url);
+
+const { Segment } = require('novel-segment');
+
+console.dir(process.version)
+console.dir(Segment)
+```
+
+### 方式二：以 default import 取得模組物件
+
+```javascript
+import _ from "novel-segment";
+
+const { Segment } = _.default;
+
+console.dir(process.version)
+console.dir(Segment)
+```
 
 ## demo
 
