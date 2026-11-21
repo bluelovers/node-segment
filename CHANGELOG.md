@@ -3,6 +3,31 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.7.126](https://github.com/bluelovers/ws-segment/compare/novel-segment@2.7.125...novel-segment@2.7.126) (2026-11-21)
+
+
+
+### 📚　Documentation
+
+* **novel-segment:** 更新安裝指令並新增 ESM 匯入說明 ([12930ed](https://github.com/bluelovers/ws-segment/commit/12930edaf872da7d87f24d3156e92364ff7dd870))
+
+
+### 🛠　Build System
+
+* **deps:** 更新多個依賴套件版本並優化工作區配置 ([95b2b0a](https://github.com/bluelovers/ws-segment/commit/95b2b0ae2e3f2d36ded0de1a2d3b5af73af866bd))
+
+
+### ⚙️　Continuous Integration
+
+* **build:** 優化版本同步機制並移除動態 require ([8336629](https://github.com/bluelovers/ws-segment/commit/833662919491f15e29427882a1e4e367c9a2fd12))
+
+
+### ♻️　Chores
+
+* sync version ([efdabd0](https://github.com/bluelovers/ws-segment/commit/efdabd0a1fdb043f94145ca5431a6545822c456a))
+* sync version ([56beda4](https://github.com/bluelovers/ws-segment/commit/56beda4574ba2409018a4499add55f5181d4b20b))
+
+
 ## [2.7.125](https://github.com/bluelovers/ws-segment/compare/novel-segment@2.7.124...novel-segment@2.7.125) (2026-10-14)
 
 **Note:** Version bump only for package novel-segment
