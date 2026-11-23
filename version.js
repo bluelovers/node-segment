@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-const VERSION = "2.7.126";
+const VERSION = "2.7.127";
 
 exports.version = VERSION;
 exports.default = VERSION;
